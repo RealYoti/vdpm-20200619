@@ -10,7 +10,7 @@ install_vitasdk () {
   case "$(uname -s)" in
      Darwin*)
       mkdir -p $INSTALLDIR
-      wget -O- "https://github.com/vitasdk/autobuilds/releases/download/master-osx-v1130/vitasdk-x86_64-apple-darwin-2020-06-18_14-24-47.tar.bz2" | tar xj -C $INSTALLDIR --strip-components=1
+      wget -O- "https://github.com/RealYoti/vdpm-20200619/releases/download/master-osx-v1130/vitasdk-x86_64-apple-darwin-2020-06-18_14-24-47.tar.bz2" | tar xj -C $INSTALLDIR --strip-components=1
      ;;
 
      Linux*)
@@ -22,13 +22,13 @@ install_vitasdk () {
         sudo mkdir -p $INSTALLDIR
         sudo chown $USER:$(id -gn $USER) $INSTALLDIR
       fi
-      wget -O- "https://github.com/vitasdk/autobuilds/releases/download/master-linux-v1133/vitasdk-x86_64-linux-gnu-2020-06-19_15-01-34.tar.bz2" | tar xj -C $INSTALLDIR --strip-components=1
+      wget -O- "https://github.com/RealYoti/vdpm-20200619/releases/download/master-linux-v1133/vitasdk-x86_64-linux-gnu-2020-06-19_15-01-34.tar.bz2" | tar xj -C $INSTALLDIR --strip-components=1
      ;;
 
      MSYS*|MINGW64*)
       UNIX=false
       mkdir -p $INSTALLDIR
-      wget -O- "https://github.com/vitasdk/autobuilds/releases/download/master-win-v1133/vitasdk-x86_64-w64-mingw32-2020-06-19_15-01-27.tar.bz2" | tar xj -C $INSTALLDIR --strip-components=1
+      wget -O- "https://github.com/RealYoti/vdpm-20200619/releases/download/master-win-v1133/vitasdk-x86_64-w64-mingw32-2020-06-19_15-01-27.tar.bz2" | tar xj -C $INSTALLDIR --strip-components=1
      ;;
 
      CYGWIN*|MINGW32*)
